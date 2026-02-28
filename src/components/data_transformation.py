@@ -109,10 +109,10 @@ class DataTransformation:
             target_columns = ["price", "price_per_sqft"]
             
             # Segregate features and targets
-            input_feature_train_df = train_df.drop(columns=target_columns, axis=1)
+            input_feature_train_df = train_df.drop(columns=target_columns)
             target_feature_train_df = train_df[target_columns]
 
-            input_feature_test_df = test_df.drop(columns=target_columns, axis=1)
+            input_feature_test_df = test_df.drop(columns=target_columns)
             target_feature_test_df = test_df[target_columns]
 
             logging.info(
